@@ -8,6 +8,7 @@
 body  {
     display: flex;
     align-items: center;
+    padding: 0 10px;
     justify-content: center;
     min-height: 100vh;
     background: #5E63BA ;
@@ -145,5 +146,20 @@ body  {
 
 .game-modal button {
     padding: 12px 23px;
+
+}
+
+@media (max-width: 782px) {
+    .container {
+        flex-direction: column;
+        padding: 30px 15px;
+        align-items: center;
+    }
+    .hangman-box img {
+        max-width: 200px;
+    }
+    .hangman-box h1 {
+        display: none;
+    }
 
 }
