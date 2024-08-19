@@ -1,7 +1,7 @@
 const wordList  = [
     {
         word: 'fbæsj1',
-        hint: 'u gay'
+        hint: 'u cool'
     },
     {
         word: 'fbæsj2131',
@@ -9,19 +9,19 @@ const wordList  = [
     },
     {
         word: 'fbæsj1321',
-        hint: 'u gay'
+        hint: 'u cool'
     },
     {
         word: 'fbæsj123',
-        hint: 'u gay'
+        hint: 'u cool'
     },
 
     {
         word: 'fbæsj511',
-        hint: 'u gay'
+        hint: 'u cool'
     },
     {
         word: 'fbæsj1555',
-        hint: 'u gay'
+        hint: 'u cool'
     },
 ]
