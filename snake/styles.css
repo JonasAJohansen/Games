@@ -1,0 +1,108 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0; /* Light mode background */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark-mode {
+    background-color: #303030; /* Dark mode background */
+    color: #ffffff; /* Dark mode text color */
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.game-container {
+    display: flex;
+    align-items: center;
+}
+
+.left-panel, .right-panel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 20px;
+}
+
+.left-panel {
+    order: 1;
+}
+
+.game-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    order: 2;
+}
+
+.right-panel {
+    order: 3;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #008cba;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px 0;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark-mode button {
+    background-color: #555555; /* Dark mode button background */
+    color: #fff; /* Dark mode button text color */
+}
+
+button:hover {
+    background-color: #005f5f;
+}
+
+body.dark-mode button:hover {
+    background-color: #444444; /* Dark mode button hover background */
+}
+
+button:focus {
+    outline: none;
+}
+
+p {
+    font-size: 20px;
+    margin: 0;
+}
+
+#gameCanvas {
+    border: 1px solid #000;
+    background-color: #fff; /* Light mode canvas background */
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+body.dark-mode #gameCanvas {
+    background-color: #202020; /* Dark mode canvas background */
+    border-color: #fff; /* Dark mode border color */
+}
+
+.highscore h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.highscore ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.highscore li {
+    font-size: 18px;
+    margin: 5px 0;
+}
