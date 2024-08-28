@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiple Choice Quiz</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="theme-toggle-container">
+        <button id="theme-toggle-button">Toggle Dark Mode</button>
+    </div>
+    <div id="quiz-container">
+        <h1>Select Category</h1>
+        <select id="category-select">
+            <option value="math">Math</option>
+            <option value="science">Science</option>
+            <option value="history">History</option>
+            <option value="psychology">Psychology</option>
+        </select>
+        <button id="start-quiz-button">Start Quiz</button>
+    </div>
+    <div id="question-container" style="display: none;">
+        <h2 id="question-text"></h2>
+        <div id="options-container"></div>
+        <button id="next-question-button" style="display: none;">Next Question</button>
+        <p id="result" style="display: none;"></p>
+    </div>
+    <script src="quizData.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

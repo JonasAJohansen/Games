@@ -1,0 +1,118 @@
+:root {
+    --background-color-light: #ffffff;
+    --text-color-light: #333;
+    --button-background-light: #007bff;
+    --button-hover-background-light: #0056b3;
+    --option-background-light: #f0f0f0;
+    --option-hover-background-light: #d4d4d4;
+
+    --background-color-dark: #1a1625; /* darkest */
+    --text-color-dark: #eeeeee; /* light text on dark background */
+    --button-background-dark: #2f2b3a;
+    --button-hover-background-dark: #46424f;
+    --option-background-dark: #2f2b3a;
+    --option-hover-background-dark: #46424f;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--background-color-light);
+    color: var(--text-color-light);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#theme-toggle-container {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+#quiz-container, #question-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+h1, h2 {
+    margin-bottom: 20px;
+    font-size: 1.5em;
+}
+
+button {
+    background-color: var(--button-background-light);
+    color: var(--text-color-light);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    max-width: 200px;
+    margin: 20px auto;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+button:hover {
+    background-color: var(--button-hover-background-light);
+}
+
+select, p {
+    width: 100%;
+    max-width: 200px;
+    margin: 0 auto 20px auto;
+    display: block;
+}
+
+.option-button {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    background-color: var(--option-background-light);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.option-button:hover {
+    background-color: var(--option-hover-background-light);
+}
+
+body.dark-mode {
+    background-color: var(--background-color-dark);
+    color: var(--text-color-dark);
+}
+
+body.dark-mode #quiz-container, body.dark-mode #question-container {
+    background-color: #2f2b3a;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode button {
+    background-color: var(--button-background-dark);
+    color: var(--text-color-dark);
+}
+
+body.dark-mode button:hover {
+    background-color: var(--button-hover-background-dark);
+}
+
+body.dark-mode .option-button {
+    background-color: var(--option-background-dark);
+}
+
+body.dark-mode .option-button:hover {
+    background-color: var(--option-hover-background-dark);
+}
