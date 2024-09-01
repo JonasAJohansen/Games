@@ -16,6 +16,13 @@ This project showcases a collection of fun and interactive games that can be pla
 - Quiz
 - Snake
 - Typing Game
+- Pac-man
+- Space Invaders
+- Frogger
+- Pong
+- Tetris
+- Battleship
+
 
 
 ## Features
