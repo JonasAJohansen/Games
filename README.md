@@ -8,7 +8,15 @@ This project showcases a collection of fun and interactive games that can be pla
 
 ## Games Included
 
-// ... List your games here ...
+// Hangman
+// Tic Tac Toe
+// 2048
+// Chess
+// Connect 4
+// Quiz
+// Snake
+// Typing Game
+
 
 ## Features
 
@@ -20,14 +28,12 @@ This project showcases a collection of fun and interactive games that can be pla
 
 Visit the GitHub Pages site for this repository to play the games online:
 
-[Play Games](https://yourusername.github.io/games)
+[Play Games](https://jonasajohansen.github.io/Games/)
 
-// ... Add instructions for local setup if applicable ...
 
 ## Recent Additions
 
-// ... List your recent game additions or updates here ...
-
+- Chess
 ## Technologies Used
 
 - JavaScript
