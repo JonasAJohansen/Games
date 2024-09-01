@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Connect 4 Game</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="game">
+    <h1>Connect 4 Game</h1>
+    <div id="board"></div>
+    <div id="status">Player's Turn: <span id="current-player">Red</span></div>
+    <button id="reset-button">Reset Game</button>
+  </div>
+  <div id="winner-modal" class="modal">
+    <div class="modal-content">
+      <h2>Winner!</h2>
+      <p id="winner-text"></p>
+      <button id="close-modal">Play Again</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
