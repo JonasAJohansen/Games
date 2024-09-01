@@ -1,0 +1,139 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #121212;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #ffffff;
+  }
+  
+  #tetris {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  #game-container {
+    display: flex;
+    gap: 20px;
+  }
+  
+  #side-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  #score-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 1.2em;
+  }
+  
+  canvas {
+    background-color: #1e1e1e;
+    border: 1px solid #333333;
+  }
+  
+  #nextPieceCanvas {
+    background-color: #1e1e1e;
+  }
+  
+  #startButton {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    background-color: #4ecdc4;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  #startButton:hover {
+    background-color: #45b7a0;
+  }
+  
+  #highScoresContainer {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  #highScoresList {
+    list-style-position: inside;
+    padding: 0;
+  }
+  
+  #highScoresList li {
+    margin-bottom: 5px;
+  }
+  
+  #next-piece-container {
+    text-align: center;
+  }
+  
+  #next-piece-container h3 {
+    margin-bottom: 10px;
+  }
+  
+  #hold-piece-container,
+  #next-piece-container {
+    text-align: center;
+  }
+  
+  #hold-piece-container h3,
+  #next-piece-container h3 {
+    margin-bottom: 10px;
+  }
+  
+  #holdPieceCanvas,
+  #nextPieceCanvas {
+    background-color: #1e1e1e;
+  }
+  
+  #gameOverModal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .modal-content {
+    background-color: #1e1e1e;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  }
+  
+  .modal-content h2 {
+    margin-top: 0;
+    color: #4ecdc4;
+  }
+  
+  .modal-content p {
+    margin-bottom: 20px;
+    font-size: 1.2em;
+  }
+  
+  #restartButton {
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #4ecdc4;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  #restartButton:hover {
+    background-color: #45b7a0;
+  }
