@@ -8,14 +8,14 @@ This project showcases a collection of fun and interactive games that can be pla
 
 ## Games Included
 
-// Hangman
-// Tic Tac Toe
-// 2048
-// Chess
-// Connect 4
-// Quiz
-// Snake
-// Typing Game
+- Hangman
+- Tic Tac Toe
+- 2048
+- Chess
+- Connect 4
+- Quiz
+- Snake
+- Typing Game
 
 
 ## Features
