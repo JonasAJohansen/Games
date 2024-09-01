@@ -34,15 +34,12 @@ Visit the GitHub Pages site for this repository to play the games online:
 ## Recent Additions
 
 - Chess
+
 ## Technologies Used
 
 - JavaScript
 - HTML5
 - CSS3
-
-## Contributing
-
-Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/yourusername/games/issues) if you want to contribute.
 
 ## License
 
