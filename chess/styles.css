@@ -1,0 +1,134 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #1a1a1a;
+    color: #f0f0f0;
+  }
+  
+  h1 {
+    margin-bottom: 20px;
+    font-size: 2.5em;
+    font-weight: 300;
+  }
+  
+  #chess-board {
+    display: grid;
+    grid-template-columns: repeat(8, 60px);
+    grid-template-rows: repeat(8, 60px);
+    gap: 1px;
+    border: 1px solid #444;
+    background-color: #444;
+    transition: transform 0.5s ease;
+  }
+  
+  .square {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8em;
+    cursor: pointer;
+    user-select: none;
+    transition: background-color 0.3s ease;
+    position: relative;
+  }
+  
+  .square.light {
+    background-color: #f0d9b5;
+  }
+  
+  .square.dark {
+    background-color: #b58863;
+  }
+  
+  .piece {
+    font-size: 2.2em;
+    cursor: grab;
+    transition: transform 0.2s ease;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  }
+  
+  .piece:hover {
+    transform: scale(1.1);
+  }
+  
+  #chess-board.dragging .piece {
+    cursor: grabbing;
+  }
+  
+  #game-options {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #3c3c3c;
+    color: #f0f0f0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #4a4a4a;
+  }
+  
+  .highlight {
+    box-shadow: inset 0 0 0 3px rgba(0, 255, 0, 0.7);
+  }
+  
+  .square::before {
+    content: attr(data-row) attr(data-col);
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    font-size: 0.6em;
+    color: rgba(255, 255, 255, 0.7);
+  }
+  
+  #game-info {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  #captured-pieces {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 480px;
+  }
+  
+  #white-captured, #black-captured {
+    font-size: 1.2em;
+  }
+  
+  #score {
+    font-size: 1.2em;
+    font-weight: bold;
+  }
+  
+  #chess-board.rotated {
+    transform: rotate(180deg);
+  }
+  
+  #chess-board.rotated .piece,
+  #chess-board.rotated .square::before {
+    transform: rotate(180deg);
+  }
+  
+  .square:not(.light):not(.dark) {
+    background-color: #000;
+  }
