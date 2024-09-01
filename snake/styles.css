@@ -6,13 +6,19 @@ body {
     height: 100vh;
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0; /* Light mode background */
+    background-color: #1a1a1a; /* Dark background */
+    color: #f0f0f0; /* Light text color */
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 body.dark-mode {
     background-color: #303030; /* Dark mode background */
     color: #ffffff; /* Dark mode text color */
+}
+
+body.light-mode {
+    background-color: #f0f0f0; /* Light mode background */
+    color: #1a1a1a; /* Dark text color */
 }
 
 h1 {
@@ -22,7 +28,9 @@ h1 {
 
 .game-container {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 20px;
 }
 
 .left-panel, .right-panel {
@@ -48,14 +56,14 @@ h1 {
 }
 
 button {
-    padding: 10px 20px;
-    background-color: #008cba;
-    color: #fff;
+    padding: 8px 16px;
+    background-color: #444;
+    color: #f0f0f0;
     border: none;
-    border-radius: 5px;
+    border-radius: 4px;
     cursor: pointer;
     margin: 5px 0;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    transition: background-color 0.3s ease;
 }
 
 body.dark-mode button {
@@ -63,12 +71,21 @@ body.dark-mode button {
     color: #fff; /* Dark mode button text color */
 }
 
+body.light-mode button {
+    background-color: #ddd;
+    color: #1a1a1a;
+}
+
 button:hover {
-    background-color: #005f5f;
+    background-color: #555;
 }
 
 body.dark-mode button:hover {
     background-color: #444444; /* Dark mode button hover background */
+}
+
+body.light-mode button:hover {
+    background-color: #ccc;
 }
 
 button:focus {
@@ -81,14 +98,19 @@ p {
 }
 
 #gameCanvas {
-    border: 1px solid #000;
-    background-color: #fff; /* Light mode canvas background */
+    border: 1px solid #444;
+    background-color: #2a2a2a;
     transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
 body.dark-mode #gameCanvas {
     background-color: #202020; /* Dark mode canvas background */
     border-color: #fff; /* Dark mode border color */
+}
+
+body.light-mode #gameCanvas {
+    background-color: #fff;
+    border-color: #ddd;
 }
 
 .highscore h2 {

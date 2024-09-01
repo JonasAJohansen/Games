@@ -20,7 +20,7 @@ let direction = { x: 0, y: 0 }; // Starting direction set to 0 to initially stop
 let apple = { x: gridSize * 10, y: gridSize * 10 };
 let score = 0;
 let highScores = JSON.parse(localStorage.getItem('highScores')) || [];
-let isDarkMode = false;
+let isDarkMode = true; // Set dark mode as default
 
 // Game loop
 const gameLoop = () => {
@@ -60,13 +60,30 @@ const update = () => {
 const draw = () => {
   context.clearRect(0, 0, canvas.width, canvas.height);
 
-  snake.forEach(segment => {
-    context.fillStyle = snakeColor;
-    context.fillRect(segment.x, segment.y, gridSize, gridSize);
+  // Draw grid lines
+  context.strokeStyle = isDarkMode ? '#333' : '#eee';
+  for (let i = 0; i <= canvas.width; i += gridSize) {
+    context.beginPath();
+    context.moveTo(i, 0);
+    context.lineTo(i, canvas.height);
+    context.stroke();
+  }
+  for (let i = 0; i <= canvas.height; i += gridSize) {
+    context.beginPath();
+    context.moveTo(0, i);
+    context.lineTo(canvas.width, i);
+    context.stroke();
+  }
+
+  // Draw snake
+  snake.forEach((segment, index) => {
+    context.fillStyle = index === 0 ? '#4CAF50' : '#388E3C'; // Darker green for body
+    context.fillRect(segment.x, segment.y, gridSize - 1, gridSize - 1);
   });
 
-  context.fillStyle = appleColor;
-  context.fillRect(apple.x, apple.y, gridSize, gridSize);
+  // Draw apple
+  context.fillStyle = '#F44336';
+  context.fillRect(apple.x, apple.y, gridSize - 1, gridSize - 1);
 };
 
 // Handle keyboard input
@@ -141,12 +158,11 @@ const updateHighScoreList = () => {
   });
 };
 
-// Toggle dark mode
-const toggleDarkMode = () => {
+// Toggle light mode
+const toggleLightMode = () => {
   isDarkMode = !isDarkMode;
-  document.body.classList.toggle('dark-mode', isDarkMode);
-  snakeColor = isDarkMode ? 'lightgreen' : 'green';
-  appleColor = isDarkMode ? 'orange' : 'red';
+  document.body.classList.toggle('light-mode', !isDarkMode);
+  toggleDarkModeBtn.textContent = isDarkMode ? 'Light Mode' : 'Dark Mode';
 };
 
 // Restart game
@@ -155,8 +171,9 @@ const restartGame = () => {
   resetGame();
 };
 
-toggleDarkModeBtn.addEventListener('click', toggleDarkMode);
-restartGameBtn.addEventListener('click', restartGame);
+toggleDarkModeBtn.addEventListener('click', toggleLightMode);
 
-// Initialize high score list
+// Initialize game
+resetGame();
+toggleLightMode(); // Call once to set initial state
 updateHighScoreList();
